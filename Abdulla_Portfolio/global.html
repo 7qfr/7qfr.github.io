@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Training - Abdulla's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Abdulla's Portfolio</div>
+    <nav class="nav-menu">
+      <button class="hamburger">☰</button>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="academic.html">Academics</a></li>
+        <li><a href="athletics.html">Athletics</a></li>
+        <li><a href="global.html">Global Training</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="global-section">
+    <h2 class="section-title">International Training Experience</h2>
+
+    <!-- Kuwait Training Camp -->
+    <div class="tournament-card">
+      <div class="tournament-header" onclick="toggleDropdown('kuwait')">
+        <h3>Kuwait Training Camp</h3>
+        <span class="dropdown-arrow">▼</span>
+      </div>
+      <div id="kuwait" class="tournament-content">
+        <div class="media-grid">
+          <img src="website_resources/images/kuwait-camp1.jpg" alt="Dojo Training">
+          <img src="website_resources/images/kuwait-camp2.jpg" alt="Group Session">
+        </div>
+        <div class="video-container">
+          <video controls>
+            <source src="website_resources/videos/kuwait-training.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kuwaiti-Bahraini Camp -->
+    <div class="tournament-card">
+      <div class="tournament-header" onclick="toggleDropdown('bahrain')">
+        <h3>Kuwaiti & Bahraini Kyokushin Camp</h3>
+        <span class="dropdown-arrow">▼</span>
+      </div>
+      <div id="bahrain" class="tournament-content">
+        <div class="media-grid">
+          <img src="website_resources/images/KBC1.jpg" alt="Certificate">
+          <img src="website_resources/images/KBC2.jpg" alt="Award">
+        </div>
+        <div class="video-container">
+          <video controls>
+            <source src="website_resources/videos/bahrain-camp.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Saudi-Russian Camp -->
+    <div class="tournament-card">
+      <div class="tournament-header" onclick="toggleDropdown('saudi')">
+        <h3>Saudi & Russian Kyokushin Camp</h3>
+        <span class="dropdown-arrow">▼</span>
+      </div>
+      <div id="saudi" class="tournament-content">
+        <div class="media-grid">
+          <img src="website_resources/images/SRC.jpg" alt="Group Photo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

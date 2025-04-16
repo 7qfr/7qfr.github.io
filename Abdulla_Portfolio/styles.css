@@ -1,0 +1,264 @@
+:root {
+  --dark-bg: #1a1a1a;
+  --card-bg: #2d2d2d;
+  --accent: #4CAF50;
+  --text: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,0,0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-list a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  margin-top: 60px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+/* Dropdown Filter */
+.filter-dropdown {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--accent);
+  color: var(--text);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Section Common Styles */
+.section-title {
+  text-align: center;
+  margin: 4rem 0 2rem;
+  font-size: 2rem;
+}
+
+/* Contact Page */
+.contact-box {
+  max-width: 600px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+}
+
+.contact-item {
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Athletics Page */
+.tournament-card {
+  background-color: var(--card-bg);
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tournament-header {
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s;
+}
+
+.tournament-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.tournament-content.active {
+  max-height: 2000px;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.media-grid img, video {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.9);
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .nav-list.active {
+    display: flex;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* About Me Page */
+.statement-container {
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 2rem;
+}
+
+.statement-text {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--accent);
+  color: var(--dark-bg);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 2rem;
+  transition: transform 0.3s;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Research Cards */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.research-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.research-card:hover {
+  transform: translateY(-5px);
+}
+
+.view-btn {
+  background-color: var(--accent);
+  color: var(--dark-bg);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.view-btn:hover {
+  background-color: #3e8e41;
+}
+
+/* Dropdown Menu */
+.filter-dropdown {
+  background-color: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--accent);
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.filter-dropdown option {
+  background-color: var(--dark-bg);
+}
